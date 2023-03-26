@@ -7,6 +7,8 @@ const cors = require("cors")
 const userRoutes = require("./routes/user")
 const authRoutes = require("./routes/auth")
 const postRoutes = require("./routes/posts")
+const conversationRoutes = require("./routes/conversation")
+const messageRoutes = require("./routes/messages")
 const multer = require("multer")
 const path = require("path")
 
@@ -40,6 +42,8 @@ app.post("/api/upload", upload.single("file"), (req,res) => {
 app.use('/api/user',userRoutes)
 app.use('/api/auth',authRoutes)
 app.use('/api/posts',postRoutes)
+app.use('/api/conversations',conversationRoutes)
+app.use('/api/message', messageRoutes)
 
 app.listen(5000,() => {
     console.log("Server running!")
