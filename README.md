@@ -24,9 +24,7 @@ npm install
 4. Create a `.env` file in the root directory of the project and add the following environment variables:
 
 ```
-PORT=<port-number>
-MONGODB_URI=<mongodb-uri>
-JWT_SECRET=<jwt-secret-key>
+MONGODB_URL=<mongodb-url>
 ```
 
 5. Start the server using the command:
